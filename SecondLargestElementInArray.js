@@ -45,3 +45,18 @@ for(value of input){
 
 const result = secondLargest(input)
 console.log(result);
+
+// Without using Set
+
+function func(input){
+    let arr = input.sort((a,b)=>a-b);
+    let res = arr[arr.length-1];
+    for(let i=arr.length-2; i>=0; i--){
+        if(res!=input[i]){
+            res = input[i];
+            break;
+        }
+    }
+    return res;
+}
+console.log(func(input));
