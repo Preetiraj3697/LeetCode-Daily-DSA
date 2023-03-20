@@ -24,3 +24,17 @@ function fun(input){
     }
 }
 fun(input)
+const n = 2
+function Odd(input,n){
+
+    for(let i=0; i<input.length; i++){
+        let curr = input[i];
+        let next = curr + n;
+        if(input[i+1]!==next){
+            console.log(next);
+            break;
+        }
+    }
+}
+
+Odd(input,n);
